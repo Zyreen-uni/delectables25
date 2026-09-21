@@ -1,4 +1,4 @@
-# 🍰 Delectables (React)
+# Delectables (React)
 
 A dessert ordering CRUD app built with **React 18 + Vite**. This is the React conversion of the vanilla JavaScript version.
 
@@ -40,8 +40,8 @@ npm run build      # production build in dist/
 | Create | `createOrder()` | Add to Cart on a new dessert |
 | Read | `listOrders()` | First load, Refresh button, failed checkout re-sync |
 | Update (full) | `updateOrder()` | Cart stepper, edit modal, adding a dessert already in the cart |
-| Update (status) | `updateOrderStatus()` | 🔁 in the cart, ↩️ in history, Place Order |
-| Delete | `deleteOrder()` | 🗑️ in the cart or history |
+| Update (status) | `updateOrderStatus()` | In the cart, in history, Place Order |
+| Delete | `deleteOrder()` | In the cart or history |
 
 Every store function waits `CONFIG.STORE_LATENCY_MS` before answering, so the components handle it like a real API: loading states, try/catch, and rollback. Set `CONFIG.STORE_FAILURE_RATE` to `0.3` in `src/config.js` to demo the error states live.
 

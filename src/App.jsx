@@ -260,7 +260,7 @@ export default function App() {
 
     const next = item.quantity + delta;
     if (next < CONFIG.MIN_QTY_PER_ITEM) {
-      showToast('Use the 🗑️ button to remove “' + item.name + '” from the cart.', 'warn');
+      showToast('Use the remove button to remove “' + item.name + '” from the cart.', 'warn');
       return;
     }
     if (next > CONFIG.MAX_QTY_PER_ITEM) {

@@ -64,7 +64,7 @@ function CartRow({ item, isBusy, onIncrease, onDecrease, onEdit, onToggle, onRem
               aria-label={'Edit ' + item.name}
               className="rounded-md p-1.5 text-stone-400 transition hover:bg-stone-100 hover:text-stone-700"
             >
-              ✏️
+              Edit
             </button>
             <button
               type="button"
@@ -74,7 +74,7 @@ function CartRow({ item, isBusy, onIncrease, onDecrease, onEdit, onToggle, onRem
               aria-label={'Confirm ' + item.name}
               className="rounded-md p-1.5 text-stone-400 transition hover:bg-emerald-50 hover:text-emerald-700"
             >
-              🔁
+              Confirm
             </button>
             <button
               type="button"
@@ -84,7 +84,7 @@ function CartRow({ item, isBusy, onIncrease, onDecrease, onEdit, onToggle, onRem
               aria-label={'Remove ' + item.name}
               className="rounded-md p-1.5 text-stone-400 transition hover:bg-rose-50 hover:text-rose-600"
             >
-              🗑️
+              Remove
             </button>
           </div>
         </div>
@@ -114,7 +114,6 @@ export default function CartDrawer({
   if (status === 'error') {
     body = (
       <div className="m-4 rounded-xl border border-rose-200 bg-rose-50 px-4 py-6 text-center">
-        <div className="text-3xl">⚠️</div>
         <h3 className="mt-2 font-display text-base font-semibold text-rose-900">Cart unavailable</h3>
         <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-rose-500">
           Source: {sourceLabel(error && error.source)}
@@ -132,7 +131,6 @@ export default function CartDrawer({
   } else if (status === 'ready' && cart.length === 0) {
     body = (
       <div className="px-6 py-16 text-center">
-        <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-stone-100 text-4xl">🧁</div>
         <h3 className="font-display text-lg font-semibold text-stone-800">Your cart is empty</h3>
         <p className="mt-1 text-sm text-stone-500">Pick something sweet from the menu to get started.</p>
       </div>
@@ -187,7 +185,7 @@ export default function CartDrawer({
             aria-label="Close cart"
             className="rounded-lg p-2 text-stone-500 transition hover:bg-stone-100 hover:text-stone-800"
           >
-            ✕
+            Close
           </button>
         </div>
 

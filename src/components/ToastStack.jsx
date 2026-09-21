@@ -4,8 +4,6 @@ const PALETTES = {
   warn: 'bg-amber-500',
   info: 'bg-stone-800',
 };
-const ICONS = { success: '✅', error: '⚠️', warn: '⚠️', info: 'ℹ️' };
-
 export default function ToastStack({ toasts, onDismiss }) {
   return (
     <div className="pointer-events-none fixed bottom-4 left-1/2 z-[70] flex w-full max-w-sm -translate-x-1/2 flex-col gap-2 px-4">
@@ -21,7 +19,6 @@ export default function ToastStack({ toasts, onDismiss }) {
               PALETTES[kind]
             }
           >
-            <span className="shrink-0">{ICONS[kind]}</span>
             <span>{toast.message}</span>
           </div>
         );

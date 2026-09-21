@@ -18,7 +18,6 @@ function SkeletonCard() {
 function EmptyPanel({ query, onClear }) {
   return (
     <div className="rounded-2xl border border-dashed border-stone-300 bg-white/70 px-6 py-14 text-center">
-      <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-stone-100 text-3xl">🔎</div>
       <h3 className="font-display text-xl font-semibold text-stone-800">No matching dessert</h3>
       <p className="mx-auto mt-2 max-w-md text-sm text-stone-500">
         Nothing on the menu matches <span className="font-semibold text-stone-700">“{query}”</span>. Try a shorter
@@ -39,7 +38,6 @@ function EmptyPanel({ query, onClear }) {
 function ErrorPanel({ error, onRetry }) {
   return (
     <div className="rounded-2xl border border-rose-200 bg-rose-50 px-6 py-14 text-center">
-      <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-rose-100 text-3xl">⚠️</div>
       <h3 className="font-display text-xl font-semibold text-rose-900">Could not load the menu</h3>
       <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-rose-500">
         Source: {sourceLabel(error && error.source)}

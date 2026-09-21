@@ -28,7 +28,6 @@ export default function OrderHistory({ orders, status, error, isBusy, onRefresh,
   } else if (orders.length === 0) {
     body = (
       <div className="rounded-2xl border border-dashed border-stone-300 bg-white/70 px-6 py-10 text-center">
-        <div className="text-3xl">🧾</div>
         <p className="mt-2 text-sm text-stone-500">No confirmed orders yet. Place one and it will show up here.</p>
       </div>
     );
@@ -64,7 +63,7 @@ export default function OrderHistory({ orders, status, error, isBusy, onRefresh,
                 aria-label={'Move ' + order.name + ' back to cart'}
                 className="rounded-md p-1.5 text-stone-400 transition hover:bg-amber-50 hover:text-amber-700"
               >
-                ↩️
+                Reopen
               </button>
               <button
                 type="button"
@@ -74,7 +73,7 @@ export default function OrderHistory({ orders, status, error, isBusy, onRefresh,
                 aria-label={'Delete ' + order.name}
                 className="rounded-md p-1.5 text-stone-400 transition hover:bg-rose-50 hover:text-rose-600"
               >
-                🗑️
+                Delete
               </button>
             </div>
           </li>
